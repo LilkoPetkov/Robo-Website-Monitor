@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Add website
+{% endblock %}
+
+{% block page_content %}
+    <div class="create-website-cont">
+        <img src="{% static 'images/wally-create-page.webp' %}" alt="wally-create" class="crawler">
+
+            <form method="POST" class="add-website-form">
+                    <h2 class="add-website-h2">Add website</h2>
+                    {% csrf_token %}
+                    {{ form }}
+                    <button class="btn btn-primary add-form-btn">Submit</button>
+            </form>
+
+    </div>
+
+{% endblock %}

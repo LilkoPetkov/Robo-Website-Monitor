@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Delete website
+{% endblock %}
+
+{% block page_content %}
+
+<div class="delete-form-cont">
+    <form method="post" class="website-delete-form">
+        {% csrf_token %}
+
+        <div class="p-container">
+            <p>Are you sure you want to delete "{{ object }}"?</p>
+        </div>
+        <button class="btn btn-primary">Confirm</button>
+    </form>
+</div>
+
+{% endblock %}

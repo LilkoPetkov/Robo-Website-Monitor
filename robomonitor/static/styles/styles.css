@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+/* ----------------------------------------- NAV ------------------------------------- */
+
+.grow { 
+    transition: all .2s ease-in-out; 
+    }
+    
+    .grow:hover { 
+    transform: scale(1.1); 
+    }
+
+.logo-img {
+    width: 7vw;
+    height: 10vh;
+    /* margin-left: 15rem; */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 10vh;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.icons-container {
+    display: flex;
+    width: 6rem;
+    margin-right: 1rem;
+    align-items: center;
+    color: white;   
+    justify-content: space-between;
+}
+
+i {
+    font-size: 24px;
+}
+
+.main-list {
+    width: 35vw;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* .main-list > ul > li > a:hover {
+    transition: padding 1s ease-out 100ms;
+    transition: background-color 1s ease-out 100ms;
+} */
+
+.main-list > ul > li > a:hover {
+    /* border: 5px solid white; */
+    padding: 10%;   
+    background-color: white;
+    color: rgb(35, 66, 7);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+body {
+    font-family: Lato;
+    background-color: #E5EBEE;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.header-01 {
+    text-align: center;
+    font-size: 62px;
+    font-family: 'Tilt Prism', cursive;
+}
+/* ----------------------------------------- MAIN ------------------------------------- */
+
+.main-container {
+    display: flex;
+    gap: 10%;
+    margin-top: 5%;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.service-info { 
+    width: 35vw;
+    height: 55vh;
+    font-size: 20px;
+    text-align: left;
+    line-height: 28px;
+    margin-left: 4vw;
+    color: rgb(64, 64, 64);
+}
+
+
+.added-websites-container {
+    display: grid;
+    /* grid-template-rows: 25% 2fr;
+    /* height: 45vh; */
+    width: 90%;
+    gap: 1%;
+    grid-template-columns: repeat(3, 1fr);
+    /* width: 45vw;
+    height: 25vh;
+    margin-right: 4vw;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+    /* border: black solid 3px; */
+}
+
+/* .websites-link {
+    margin-left: 8px;
+} */
+
+.added-websites-container > .websites-link {
+    flex-direction: column;
+    /* display: flex; */
+    display: flex;
+    border-radius: 20%;
+    width: 30vw;
+    height: 25vh;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+
+    /* justify-content: center;
+    align-items: center; */
+}
+
+
+/* .added-websites-container > .websites-link:hoover {
+    
+} */
+
+
+.added-websites-container > .websites-link > a {
+    color: white;
+    display: inline-block;
+}
+
+.del-rev-links {
+    display: flex;
+    gap: 2%
+}
+
+p {
+    text-align: center;
+}
+
+.added-websites-container > .websites-link {
+    /* box-shadow: inset 0 0 0 0 #54b3d6; */
+    box-shadow: inset 0px 3px 15px rgba(0,0,0,0.2);
+    color: #54b3d6;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+
+.added-websites-container > .websites-link:hover {
+    box-shadow: inset 0 0 100px 0 #54b3d6;
+}
+
+
+/* ----------------------------------------- FOOTER ------------------------------------- */
+
+
+  .footer-container {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    background-color: black;
+    height: 5vh;
+    justify-content: center;
+  }
+
+/* ----------------------------------------- FORM ------------------------------------- */
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.help {
+    font-size: 18px;
+    color: black;
+}
+
+.link-help {
+    color: blue;
+    font-size: 18;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+}
+
+
+
+.btn-primary {
+    margin-top: 8%;
+}
+
+.title {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 48px;
+}
+
+/* ----------------------------------------- INDEX ------------------------------------- */
+
+
+  .crawler {
+    height: 50vh;
+    width: 40vw;
+    border-radius: 24px;
+    margin-right: 5%;
+    margin-left: 0px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.link {
+    color: blue;
+}
+
+
+.container {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    gap: 12%;
+    margin-left: 3%;
+}
+
+.container-02 {
+    margin: auto;
+    display: flex;
+    gap: 12%;
+}
+
+.content {
+    font-size: large;
+    text-align: center;
+    letter-spacing: 3px;
+    width: 40vw;
+    color: black;
+}
+
+.paragraph-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.domain-info {
+    /* margin-left: 15%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10%;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    width: 45vw;
+    padding: 2%;
+    border-radius: 20%;
+    height: 50vh;
+}
+
+.tect-cont {
+    /* background: #fd9; */
+    /* margin-left: 5%; */
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    width: 55vw;
+    padding: 2%;
+    border-radius: 20%;
+    height: 50vh;
+
+}
+
+.upper-p {
+    margin-top: 5%;
+}
+
+/* ----------------------------------------- Add website ------------------------------------- */
+
+.add-form {
+    width: 30vw;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+
+.add-form-container {
+    margin-left: 5%;
+    gap: 5%;
+    width: 50vw;
+    height: 40vh;
+    border-radius: 20%;
+}
+
+.add-form-btn {
+    margin-top: 2%;
+}
+
+.add-website-h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.create-website-cont {
+    justify-content: center;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.delete-form-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.website-delete-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.website-delete-form > button {
+    margin-left: 0;
+}
+
+.message {
+    background-color: red;
+}
+
+
+/* ----------------------------------------- Error ------------------------------------- */
+
+.mainbox {
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+
+.err {
+      color: black;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 11rem;
+      position:absolute;
+      left: 20%;
+      top: 8%;
+}
+
+.far {
+    position: absolute;
+    font-size: 8.5rem;
+    left: 42%;
+    top: 15%;
+    color: black;
+}
+
+.err2 {
+      color: black;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 11rem;
+      position:absolute;
+      left: 68%;
+      top: 8%;
+}
+
+.msg {
+      text-align: center;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 1.6rem;
+      position:absolute;
+      left: 16%;
+      top: 45%;
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.cont {
+    display: flex;
+    justify-content: space-around;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.table-cont {
+    display: flex;
+}
+
+.t1 {
+    border: 6px solid #408E91;
+}
+
+.t2 {
+    border: 6px solid #408E91;
+}
+
+label {
+    display: block;
+    margin-left: 30%;
+    margin-top: 5%;
+    letter-spacing: 3px;
+}
+
+input {
+    display: block;
+    margin-left: 35%;
+}
+
+#id_delete_form-remove {
+    display: none;
+}
+
+#id_compare_form-compare {
+    display: none;
+}
+
+.fail {
+    font-size: 18px;
+}
+
+.none-form {
+    box-shadow: none
+}
+
+.back-btn {
+    width: 100%;
+    height: 15%;
+}
+
+.alert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    items-align: center;
+    background-color: red;
+    animation: hideAnimation 0s ease-in 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+
+.profile-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+
+.website-menu {
+    display: flex;
+    justify-content: flex-end;
+    items-align: center;
+    margin-top: 20px;
+}
+
+.add-site {
+    margin-top: 0px;
+    margin-right: 5%;
+}
+
+h2 {
+    font-family: 'Tilt Prism', cursive;
+}
+
+form {
+    box-shadow: inset 0px 3px 15px rgba(0,0,0,0.2);
+    margin-top: 2%;
+    width: 500px;
+    height: 600px;
+
+    border-radius: 12px;
+}
+
+button {
+    margin-left: 40%;
+
+}
+
+.p-container {
+    width: 50%;
+    font-size: large;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+select {
+ display: block;
+ margin-left: 35%
+}
+
+.add-website-form {
+    box-shadow: inset 0px 3px 15px rgba(0,0,0,0.2);
+
+    width: 500px;
+    height: 350px;
+
+    border-radius: 12px;
+}
+
+
+/* ----------------------------------------- Table ------------------------------------- */
+
+table {
+    border-radius: 8px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #dddddd;
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+    border: 1px solid black;
+}

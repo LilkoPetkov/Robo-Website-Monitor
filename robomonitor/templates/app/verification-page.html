@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Website details
+{% endblock %}
+
+{% block page_content %}
+    <div class="container-02">
+        <!-- <img src="{% static 'images/robo-verify.webp' %}" alt="crawler" class="crawler"> -->
+        <div class="tect-cont">
+            <p class="content">
+                Here we can verify the DNS records <br>
+                A record would be generated for the website as soon as it is added. 
+                <br>
+                The TXT record would need to be added in your DNS host's zone the following way:
+                <br>
+                <p class="content upper-p">Hostname: @ / empty / {{ domain.domain }}</p>
+                <br>
+                <p class="content">TTL: 24 hour</p>
+                <br>
+                <p class="content">Value: {{ domain.verification_record }}</p>
+                <br>
+            </p>
+        </div>
+        <div class="domain-info">
+            <div>
+                <h3 class="content">Domain:</h3>
+                <p class="content">{{ domain.domain }}</p>
+            </div>
+
+            <div>
+                {% if domain.verification_status == "VERIFIED" %}
+                <h3 class="content" style="display: inline;">Domain Status :</h3> 
+                <br>
+                <p class="content" style="display: inline;">{{ domain.verification_status }} <i class="fa-solid fa-check" style="color: #1cca47;"></i></p>
+                {% else %}
+                <h3 class="content" style="display: inline;">Domain Status :</h3> 
+                <br>
+                <p class="content" style="display: inline;">{{ domain.verification_status }} <i class="fa-solid fa-xmark" style="color: #b21f1f;"></i></p>
+                {% endif %}
+            </div>
+
+            <div>
+                <h3 class="content">Verification record</h3>
+                <p class="content">{{ domain.verification_record }}</p>
+            </div>
+
+            <form action="" method="POST" class="none-form">
+                {% csrf_token %}
+                {{ form }}
+                <button class="btn btn-primary domain-check-btn">Submit</button>
+            </form>
+
+        </div>
+    </div>
+
+{% endblock %}

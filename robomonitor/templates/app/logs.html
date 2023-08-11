@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Logs
+{% endblock %}
+
+{% block page_content %}
+
+{% load django_tables2 %}
+{% render_table table %}
+
+
+
+{% if table.page.has_previous %}
+    <a class="btn btn-outline-primary" href="?page=1">&laquo; first</a>
+    <a class="btn btn-outline-primary" href="?page={{ table.page.previous_page_number }}">previous</a>
+{% endif %}
+
+<span class="current content">
+    Page {{ table.page.number }} of {{ table.page.paginator.num_pages }}.
+</span>
+
+{% if table.page.has_next %}
+    <a class="btn btn-outline-primary" href="?page={{ table.page.next_page_number }}">next</a>
+    <a class="btn btn-outline-primary" href="?page={{ table.page.paginator.num_pages }}">last &raquo;</a>
+{% endif %}
+
+
+{% endblock %}

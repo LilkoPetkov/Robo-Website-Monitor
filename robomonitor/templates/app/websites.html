@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Websites
+{% endblock %}
+
+{% block page_content %}
+
+    <div class="website-menu"><a href="{% url 'website create' %}" class="add-site btn btn-primary a-button-link">Add Website</a></div>
+
+
+    <h1 class="header-01">Your Websites</h1>
+
+    <main class="main-container">
+
+
+        <div class="added-websites-container">
+            {% for website in websites %}
+            <div class="websites-link">
+                    <p class="content">{{ website.domain }}</p>
+                    <div class="del-rev-links">
+                        <a href="{% url 'website update' website.pk %}" class="btn btn-primary a-button-link">Update</a>
+                        <a href="{% url 'dns check' website.pk %}" class="btn btn-primary a-button-link">Review</a>
+                        <a href="{% url 'logs' website.pk %}" class="btn btn-primary a-button-link">Logs</a>
+                        <a href="{% url 'website delete' website.pk %}" class="btn btn-primary a-button-link">Delete</a>
+                    </div>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+{% endblock %}

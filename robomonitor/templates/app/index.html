@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block page_content %}
+    <div class="container">
+        <img src="{% static 'images/robo.webp' %}" alt="crawler" class="crawler">
+
+        <div class="paragraph-cont">
+            <p class="content">
+                Hello, I am your robot friend. I will keep a watch over your website. <br>
+                I will help you monitor your website on specific timeframes chosen by you. 
+                <br>
+                You can review and add your websites from <a href="{% url 'websites' %}" class="link">here</a>.
+                <br>
+                <br>
+                <span style="font-style: italic;">Let's GO!</span>
+            </p>
+        <br>
+        </div>
+
+    </div>
+
+{% endblock %}

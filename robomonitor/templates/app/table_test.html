@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Logs
+{% endblock %}
+
+{% block page_content %}
+
+<table>
+    <tr>
+        <th>Status Code</th>
+        <th>Response Headers</th>
+        <th>Website Speed</th>
+        <th>Date</th>
+        <th>Website</th>
+    </tr>
+    {% for log in logs %}
+    <tr>
+        <td>{{ log.status_code }}</td>
+        <td>{{ log.response_headers }}</td>
+        <td>{{ log.website_speed }}</td>
+        <td>{{ log.date_time }}</td>
+        <td>{{ log.website }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+    {% if page.has_previous %}
+        <a href="?page={{page.previous_page_number}}"
+ class="btn btn-secondary mx-2">Previous</a>
+    {% endif %}
+
+    <a href="?page=1" class="btn btn-secondary">First</a>
+
+    {% for num in page.paginator.page_range %}
+        {% if num == page.number %}
+            <span>{{ num }}</span>
+        {% else %}
+            <a href="?page={{num}}" class="btn btn-secondary mx-2">
+ {{ num }}
+ </a>
+        {% endif %}
+    {% endfor %}
+
+    <a href="?page={{page.paginator.num_pages}}" class="btn btn-secondary mx-2">
+ Last
+ </a>
+
+    {% if page.has_next %}
+        <a href="?page={{page.next_page_number}}" class="btn btn-secondary mx-2">
+ Next
+ </a>
+    {% endif %}
+
+{% endblock %}
