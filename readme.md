@@ -56,8 +56,6 @@ celery -A robomonitor beat -l info
  - Python 3.8 / 3.11
  - pgAdmin 4 v6.21
  - PostgreSQL 13.10 
- - HTML
- - CSS
  - Celery 5.3.1 (emerald-rush)
  - Redis server v=7.0.12
 
